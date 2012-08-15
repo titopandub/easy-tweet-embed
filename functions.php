@@ -27,7 +27,9 @@ function embedtweet_addbuttons() {
 	if ( get_user_option('rich_editing') == 'true') {
 		add_filter("mce_external_plugins", "add_embedtweet_tinymce_plugin");
 		add_filter('mce_buttons', 'register_embedtweet_button');
+	}
 }
+
 function register_embedtweet_button($buttons) {
 	array_push($buttons, "|", "embedtweet");
 	return $buttons;
