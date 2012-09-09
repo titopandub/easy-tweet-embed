@@ -3,7 +3,7 @@
 Plugin Name: Easy Tweet Embed
 Plugin URI: http://www.leavingworkbehind.com/easy-tweet-embed/
 Description: Allows you to easily embed pre-formatted tweets within your blog posts.
-Version: 1.5.1
+Version: 1.5.9
 Author: Tom Ewer and Tito Pandu
 Author URI: http://www.leavingworkbehind.com/easy-tweet-embed/
 */
@@ -44,5 +44,3 @@ function add_embedtweet_tinymce_plugin($plugin_array) {
 add_shortcode( 'embedtweet', 'embedtweet_func' );
 // init process for button control
 add_action('init', 'embedtweet_addbuttons');
-
-?>
