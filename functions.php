@@ -41,6 +41,24 @@ function add_embedtweet_tinymce_plugin($plugin_array) {
 	return $plugin_array;
 }
 
+if ( !function_exists('embedtweet_addfullscreen_buttons') ) {
+	function embedtweet_addfullscreen_buttons($buttons) {
+		// add a separator
+		$buttons[] = 'separator';
+		// format: title, onclick, show in both editors
+		$buttons['highlight'] = array(
+			// Title of the button
+			'title' => __('Easy Tweet Embed'),
+			// Command to execute
+			'onclick' => "tinyMCE.execCommand('embedtweetcmd');",
+			// Show on visual AND html mode
+			'both' => false
+		);
+		return $buttons;
+	}
+	add_filter( 'wp_fullscreen_buttons', 'embedtweet_addfullscreen_buttons' );
+}
+
 add_shortcode( 'embedtweet', 'embedtweet_func' );
 // init process for button control
 add_action('init', 'embedtweet_addbuttons');
