@@ -15,7 +15,7 @@
 			}),
 			ed.addButton('embedtweet', {
 				title : 'Easy Embed Tweet',
-				image : url + '/embedtweet.png',
+				image : url + '/css/images/embedtweet.png',
 				cmd : 'embedtweetcmd'
 			}),
 			ed.addShortcut('ctrl+shift+e', 'Easy Tweet Embed', 'embedtweetcmd');

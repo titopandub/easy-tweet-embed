@@ -46,7 +46,7 @@ if ( !function_exists('embedtweet_addfullscreen_buttons') ) {
 		// add a separator
 		$buttons[] = 'separator';
 		// format: title, onclick, show in both editors
-		$buttons['highlight'] = array(
+		$buttons['embedtweet'] = array(
 			// Title of the button
 			'title' => __('Easy Tweet Embed'),
 			// Command to execute
@@ -62,3 +62,9 @@ if ( !function_exists('embedtweet_addfullscreen_buttons') ) {
 add_shortcode( 'embedtweet', 'embedtweet_func' );
 // init process for button control
 add_action('init', 'embedtweet_addbuttons');
+
+function embedtweetcss() {
+	wp_register_style( 'custom_wp_admin_css', plugins_url('css/easy-tweet-embed.css', __FILE__) );
+	wp_enqueue_style( 'custom_wp_admin_css' );
+}
+add_action( 'admin_enqueue_scripts', 'embedtweetcss' );
