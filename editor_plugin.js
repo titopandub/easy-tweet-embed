@@ -10,7 +10,7 @@
 					inline: 1
 				}, {
 				  plugin_url : url,
-					s_permalink : jQuery('#sample-permalink').text()
+					s_permalink : getPostID
 				});
 			}),
 			ed.addButton('embedtweet', {
@@ -29,7 +29,7 @@
 				author : 'Tom Ewer and Tito Pandu',
 				authorurl : 'http://www.leavingworkbehind.com/',
 				infourl : 'http://www.leavingworkbehind.com/',
-				version : "1.5.1"
+				version : "1.6.1"
 			};
 		}
 	});
