@@ -106,6 +106,7 @@ jQuery(document).ready(function(){
 		}
 	}).blur();
 
+	// Must be put on outside WordPress Admin
 	// Outbound Link Tracking with Google Analytics
 	// Requires jQuery 1.7 or higher (use .live if using a lower version)
 	jQuery("a.embedtweet").on('click',function(e){
